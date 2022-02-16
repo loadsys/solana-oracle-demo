@@ -1,0 +1,21 @@
+[package]
+name = "oracle"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "oracle"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.19.0"
+provider = { path = "../provider", features = ["cpi"] }
+
